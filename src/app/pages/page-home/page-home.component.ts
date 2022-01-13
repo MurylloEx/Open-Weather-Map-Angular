@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/services';
 
 @Component({
   selector: 'owm-home',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
+    // this.apiService.getCityWeather('Recife', 'PE').then((v) => {
+    //   console.log(v)
+    // });
   }
 
 }

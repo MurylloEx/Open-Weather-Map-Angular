@@ -17,7 +17,6 @@ import { InputTextareaModule } from "primeng/inputtextarea";
 import { MessageService } from "primeng/api";
 
 @NgModule({
-  declarations: [],
   imports: [
     CardModule,
     ToastModule,
@@ -32,9 +31,6 @@ import { MessageService } from "primeng/api";
     OverlayPanelModule,
     ToggleButtonModule,
     InputTextareaModule
-  ],
-  exports: [
-    MessageService
   ]
 })
 export class PrimeNgModule { }

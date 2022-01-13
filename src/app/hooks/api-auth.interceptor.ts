@@ -14,15 +14,17 @@ export class ApiAuthInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     let headers = request.headers; 
     let params = request.params;
+    let url = 'https://thingproxy.freeboard.io/fetch/' + request.url;
 
     if (headers.has('x-protected-route')){
       if (headers.get('x-protected-route') == 'true'){
-        params.set('APPID', '1884d402665d107395559afac11f5d87');
+        params = params.append('APPID', '1884d402665d107395559afac11f5d87')
         headers = headers.delete('x-protected-route');
       }
     }
   
-    return next.handle(request.clone({ headers, params }));
+    const newRequest = request.clone({ headers, params, url });
+    return next.handle(newRequest);
   }
 
 }
