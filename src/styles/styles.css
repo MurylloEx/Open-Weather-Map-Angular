@@ -1,1 +1,7 @@
 /*Something*/
+
+.owm-style-page-dock {
+  min-height: calc(100vh - 130px);
+  padding-bottom: 128px;
+  width: 100%;
+}

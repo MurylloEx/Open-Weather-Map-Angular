@@ -7,6 +7,11 @@ import { PageHomeComponent, PageNotFoundComponent } from '../pages';
     PageHomeComponent,
     PageNotFoundComponent
   ],
-  imports: [CommonModule]
+  imports: [CommonModule],
+  exports: [
+    CommonModule,
+    PageHomeComponent,
+    PageNotFoundComponent
+  ]
 })
 export class PagesModule { }

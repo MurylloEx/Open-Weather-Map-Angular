@@ -1,8 +1,5 @@
 import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
-import { BrowserModule } from "@angular/platform-browser";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { PagesModule } from "./pages.module";
 import { RoutingModule } from "./routing.module";
@@ -16,14 +13,11 @@ import { ApiService, HttpService } from "../services";
 @NgModule({
   declarations: [OwmAppComponent],
   imports: [
-    FormsModule,
-    PagesModule,
-    BrowserModule,
+    ComponentsModule,
     RoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule,
-    ComponentsModule,
-    PrimeNgModule
+    PrimeNgModule,
+    PagesModule
   ],
   providers: [
     HttpService,
