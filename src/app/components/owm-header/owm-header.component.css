@@ -5,10 +5,12 @@
   border-bottom: 1px solid var(--yellow-300);
 }
 
+.owm-header-image-div {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
 .owm-header-image {
-  top: 50%;
-  width: 48px;
-  height: 48px;
   position: relative;
-  transform: translateY(-50%);
 }
