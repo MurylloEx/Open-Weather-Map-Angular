@@ -18,7 +18,8 @@ export class ApiAuthInterceptor implements HttpInterceptor {
 
     if (headers.has('x-protected-route')){
       if (headers.get('x-protected-route') == 'true'){
-        params = params.append('APPID', '1884d402665d107395559afac11f5d87')
+        params = params.append('lang', 'pt_br')
+          .append('APPID', '1884d402665d107395559afac11f5d87');
         headers = headers.delete('x-protected-route');
       }
     }

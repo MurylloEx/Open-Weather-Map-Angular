@@ -1,35 +1,45 @@
-<!-- <p-dataView 
-  #dataView [value]="m_Services" 
-  [paginator]="false" 
-  [rows]="10" 
-  filterBy="Name" 
-  layout="grid"
-  emptyMessage="Nenhuma previsão climática cadastrada.">
+<owm-spacer [owmSpace]="64"></owm-spacer>
 
-  <ng-template pTemplate="header">
-    <div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between">
-      <div class="p-input-icon-left p-mb-2 p-mb-md-0">
-        <i class="pi pi-search"></i>
-        <input 
-          pInputText 
-          type="text" 
-          placeholder="Nome do serviço" 
-          (input)="dataView.filter($event.target.value)">
+<owm-card 
+  owmTitle="Clima nas principais cidades" 
+  styleClass="mt-5 mr-4 ml-4">
+  
+  <p-dataView 
+    #dataView 
+    [paginator]="true" 
+    [rows]="10" 
+    filterBy="name" 
+    layout="grid" 
+    [value]="m_CityWeatherList" 
+    emptyMessage="Nenhuma previsão climática cadastrada">
+  
+    <ng-template pTemplate="header">
+      <div class="flex flex-column md:flex-row justify-content-between">
+        <div class="p-input-icon-left mb-2 mb-md-0">
+          <i class="pi pi-search"></i>
+          <input
+            pInputText 
+            type="text" 
+            placeholder="Nome da cidade" 
+            [(ngModel)]="m_CityNameFilter"
+            (input)="dataView.filter(onCityNameFilter($event))">
+        </div>
+        <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
       </div>
-      <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
-    </div>
-  </ng-template>
+    </ng-template>
+  
+    <ng-template let-service pTemplate="listItem">
+      <div class="col-12">
+        
+      </div>
+    </ng-template>
+  
+    <ng-template let-service pTemplate="gridItem">
+      <div class="col-12 md-4 lg-3">
+        
+      </div>
+    </ng-template>
+  
+  </p-dataView>
 
-  <ng-template let-service pTemplate="listItem">
-    <div class="p-col-12 p-md-4 p-lg-3">
-      
-    </div>
-  </ng-template>
-
-  <ng-template let-service pTemplate="gridItem">
-    <div class="p-col-12 p-md-4 p-lg-3">
-      
-    </div>
-  </ng-template>
-
-</p-dataView> -->
+</owm-card>

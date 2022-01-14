@@ -1,0 +1,29 @@
+.owm-card-container {
+  border-radius: 8px;
+  border-width: 1px;
+  border: 1px solid var(--orange-500);
+  background-color: white;
+}
+
+.owm-card-header-border {
+  height: 6px;  
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: var(--orange-500);
+}
+
+.owm-card-header {
+  padding-bottom: 12px;
+}
+
+.owm-card-body {
+  padding-bottom: 16px;
+}
+
+.owm-card-header-title {
+  margin: 0;
+  padding-left: 12px;
+  padding-top: 8px;
+  font-size: 24px;
+  color: var(--orange-700);
+}

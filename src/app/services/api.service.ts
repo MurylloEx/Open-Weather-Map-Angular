@@ -22,4 +22,8 @@ export class ApiService {
       { ...HttpService.AuthHeader, ...HttpService.JsonHeader });
   }
 
+  getWeatherIcon(iconId: string){
+    return `http://openweathermap.org/img/wn/${iconId}.png`;
+  }
+
 }

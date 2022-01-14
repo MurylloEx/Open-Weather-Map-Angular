@@ -4,13 +4,25 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { OwmFooterComponent, OwmHeaderComponent, OwmPanelComponent } from '../components';
+import { 
+  OwmCardComponent, 
+  OwmFooterComponent, 
+  OwmHeaderComponent, 
+  OwmPanelComponent, 
+  OwmSpacerComponent,
+  OwmWeatherItemComponent,
+  OwmWeatherRowComponent
+} from '../components';
 
 @NgModule({
   declarations: [
     OwmHeaderComponent,
     OwmFooterComponent,
-    OwmPanelComponent
+    OwmPanelComponent,
+    OwmCardComponent,
+    OwmSpacerComponent,
+    OwmWeatherItemComponent,
+    OwmWeatherRowComponent
   ],
   imports: [
     CommonModule,
@@ -20,9 +32,16 @@ import { OwmFooterComponent, OwmHeaderComponent, OwmPanelComponent } from '../co
   ],
   exports: [
     CommonModule,
+    FormsModule,
+    BrowserModule,
+    BrowserAnimationsModule,
     OwmHeaderComponent,
     OwmFooterComponent,
-    OwmPanelComponent
+    OwmPanelComponent,
+    OwmCardComponent,
+    OwmSpacerComponent,
+    OwmWeatherItemComponent,
+    OwmWeatherRowComponent
   ]
 })
 export class ComponentsModule { }

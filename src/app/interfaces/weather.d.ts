@@ -51,3 +51,16 @@ export interface WeatherResponse {
   name: string;
   cod: number;
 }
+
+/*
+  Nome da cidade (name)
+  Velocidade do vento (wind)
+  Temperatura (main)
+  Temperatura mínima (main)
+  Temperatura máxima (main)
+  Pressão atmosférica (main)
+  Umidade (main)
+  Cobertura de nuvens (clouds)
+  Descrição meteorológica (weather)
+  Ícone meteorológico (weather)
+*/
