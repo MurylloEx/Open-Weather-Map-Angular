@@ -14,7 +14,7 @@ export class ApiAuthInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     let headers = request.headers; 
     let params = request.params;
-    let url = '' + request.url;
+    let url = 'https://thingproxy.freeboard.io/fetch/' + request.url;
 
     if (headers.has('x-protected-route')){
       if (headers.get('x-protected-route') == 'true'){

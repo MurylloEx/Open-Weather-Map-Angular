@@ -15,7 +15,7 @@
 Para instalar o sistema e executá-lo, você necessitará do @angular/cli disponível no npm e yarn além do Node.js. Execute o comando abaixo para visualizar o sistema no endereço ``http://localhost/``.
 
 ```
-npm start
+npm install && npm start
 ```
 
 ## 📖 O que é o Open Weather Map Angular?
