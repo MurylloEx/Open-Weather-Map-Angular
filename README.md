@@ -33,6 +33,11 @@ O site **Open Weather Map Angular**, é um painel web para visualizar as condiç
 
 ## 🚀 Versão Final (Entregável):
 
+![Screenshot_1](https://user-images.githubusercontent.com/32225687/149562720-7eb8393e-d61b-4895-ae01-b0374d18353d.png)
+![Screenshot_2](https://user-images.githubusercontent.com/32225687/149562726-21851e55-c7f3-4271-ba06-1e78e4b5a12e.png)
+![Screenshot_3](https://user-images.githubusercontent.com/32225687/149562735-c07b0bc0-879d-48dd-9527-b68648f73f12.png)
+![Screenshot_4](https://user-images.githubusercontent.com/32225687/149562737-516b29a0-6f88-4f67-a7f8-de3058e50194.png)
+
 Acesse o link para desfrutar da versão estável e final do sistema **Open Weather Map Angular** no ar!
 - [Clique aqui para acessar o sistema!](https://comeia-weather.vercel.app/#/)
 
