@@ -27,7 +27,7 @@ export class PageHomeComponent implements OnInit {
   }
 
   onCityWeatherModalClose(value: any){
-    console.log(value);
+    console.log('exemplo', value);
   }
 
   doGetCityWeatherList(){

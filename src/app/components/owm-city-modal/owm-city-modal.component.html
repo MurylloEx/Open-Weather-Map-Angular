@@ -1,1 +1,35 @@
+<owm-spacer [owmSpace]="8"></owm-spacer>
+
+<p-dropdown 
+  [options]="m_StatesList" 
+  [(ngModel)]="m_StateSelected" 
+  (ngModelChange)="onStateSelected($event)"
+  appendTo="body"
+  optionLabel="nome"
+  placeholder="Selecione um estado"
+  emptyMessage="Carregando a lista de estados..."
+  styleClass="owm-style-full-width">
+</p-dropdown>
+
+<owm-spacer [owmSpace]="16"></owm-spacer>
+
+<p-dropdown 
+  [options]="m_CitiesList" 
+  [(ngModel)]="m_CitySelected" 
+  appendTo="body"
+  optionLabel="nome" 
+  placeholder="Selecione uma cidade"
+  emptyMessage="Carregando a lista de cidades..."
+  styleClass="owm-style-full-width">
+</p-dropdown>
+
 <owm-spacer [owmSpace]="32"></owm-spacer>
+
+<div class="flex justify-content-center align-items-center">
+  <button 
+    pButton 
+    (click)="onFinishModal()"
+    [disabled]="(m_StateSelected == undefined) || (m_CitySelected == undefined)">
+    Adicionar previsões do tempo
+  </button>
+</div>

@@ -17,6 +17,7 @@ import { OverlayPanelModule } from "primeng/overlaypanel";
 import { InputTextareaModule } from "primeng/inputtextarea";
 import { DynamicDialogModule } from "primeng/dynamicdialog";
 
+import { MessageService } from "primeng/api";
 import { DialogService } from "primeng/dynamicdialog";
 
 @NgModule({
@@ -38,7 +39,10 @@ import { DialogService } from "primeng/dynamicdialog";
     InputTextareaModule,
     DynamicDialogModule
   ],
-  providers: [DialogService],
+  providers: [
+    DialogService,
+    MessageService
+  ],
   exports: [
     CardModule,
     ToastModule,
