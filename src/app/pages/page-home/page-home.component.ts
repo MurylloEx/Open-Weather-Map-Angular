@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { WeatherResponse } from 'src/app/interfaces';
 import { ApiService, ModalService } from 'src/app/services';
 
@@ -14,11 +14,19 @@ export class PageHomeComponent implements OnInit {
 
   constructor(
     private apiService: ApiService, 
-    private modalService: ModalService) { }
+    private modalService: ModalService,
+    private changeDetector: ChangeDetectorRef) { }
 
   ngOnInit(): void {
-    // this.apiService.getCityWeather('Recife', 'PE').then((v) => {
-    //   console.log(v)
+    const cities = [
+      { name: 'Recife', uf: 'PE' },
+      { name: 'Garanhuns', uf: 'PE' },
+      { name: 'Caruaru', uf: 'PE' },
+      { name: 'Olinda', uf: 'PE' },
+      { name: 'Alagoinhas', uf: 'PE' }
+    ];
+    // Promise.all(cities.map(c => this.apiService.getCityWeather(c.name, c.uf))).then((values) => {
+    //   this.m_CityWeatherList = values;
     // });
   }
 
@@ -26,8 +34,11 @@ export class PageHomeComponent implements OnInit {
     return event?.target?.value ?? '';
   }
 
-  onCityWeatherModalClose(value: any){
-    console.log('exemplo', value);
+  onCityWeatherModalClose(value?: WeatherResponse){
+    if (!!value){
+      this.m_CityWeatherList.push(value);
+      this.changeDetector.detectChanges();
+    }
   }
 
   doGetCityWeatherList(){
@@ -36,7 +47,9 @@ export class PageHomeComponent implements OnInit {
 
   doAddCityWeather(){
     this.modalService.openAddCityDialog().onClose.subscribe({ 
-      next: this.onCityWeatherModalClose 
+      next: (value) => {
+        this.onCityWeatherModalClose(value);
+      }
     });
   }
 

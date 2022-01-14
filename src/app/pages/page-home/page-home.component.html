@@ -1,7 +1,7 @@
 <owm-spacer [owmSpace]="64"></owm-spacer>
 
 <owm-card 
-  owmTitle="Clima nas principais cidades" 
+  owmTitle="Previsão do tempo nas principais cidades" 
   styleClass="mt-5 mr-5 ml-5">
   
   <p-dataView 
@@ -29,14 +29,14 @@
     </ng-template>
   
     <ng-template let-item pTemplate="listItem">
-      <div class="p-3 col-12">
-        
+      <div class="p-3 col col-12 sm:col-12 md:col-6">
+        <owm-weather-item [owmWeather]="item" (owmClick)="doAddCityWeather()"></owm-weather-item>
       </div>
     </ng-template>
   
     <ng-template let-item pTemplate="gridItem">
-      <div class="p-3 col sm:col-12 md:col-4 lg:col-3 xlg:col-2">
-        <owm-weather-item [owmWeather]="item" (click)="doAddCityWeather()"></owm-weather-item>
+      <div class="p-3 col col-12 sm:col-12 md:col-4 lg:col-3 xlg:col-2">
+        <owm-weather-item [owmWeather]="item" (owmClick)="doAddCityWeather()"></owm-weather-item>
       </div>
     </ng-template>
   

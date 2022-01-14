@@ -12,8 +12,8 @@ export class HttpService {
   constructor(private http: HttpClient) { }
 
   get<T = any>(url: string, params?: any, headers?: any): Promise<T | any>{
-    return new Promise((next, _reject) => {
-      this.http.get(url, {
+    return new Promise<T>((next, _reject) => {
+      this.http.get<T>(url, {
         params: {...params},
         headers: {...headers}
       }).subscribe({ next, error: (e) => next(e.error) });
@@ -21,24 +21,24 @@ export class HttpService {
   }
 
   post<T = any>(url: string, body: any, headers?: any): Promise<T | any>{
-    return new Promise((next, _reject) => {
-      this.http.post(url, body, {
+    return new Promise<T>((next, _reject) => {
+      this.http.post<T>(url, body, {
         headers: {...headers}
       }).subscribe({ next, error: (e) => next(e.error) });
     });
   }
 
   put<T = any>(url: string, body: any, headers?: any): Promise<T | any>{
-    return new Promise((next, _reject) => {
-      this.http.put(url, body, {
+    return new Promise<T>((next, _reject) => {
+      this.http.put<T>(url, body, {
         headers: {...headers}
       }).subscribe({ next, error: (e) => next(e.error) });
     });
   }
 
   delete<T = any>(url: string, headers?: any): Promise<T | any>{
-    return new Promise((next, _reject) => {
-      this.http.delete(url, {
+    return new Promise<T>((next, _reject) => {
+      this.http.delete<T>(url, {
         headers: {...headers}
       }).subscribe({ next, error: (e) => next(e.error) });
     });

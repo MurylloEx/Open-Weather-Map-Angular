@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { WeatherResponse } from '../interfaces';
 import { HttpService } from './http.service';
 
 @Injectable({
@@ -16,14 +17,14 @@ export class ApiService {
   }
 
   getCityWeather(cityName: string, ufCode: string, country: string = 'BR') {
-    return this.http.get(
+    return this.http.get<WeatherResponse>(
       this.getApiBase() + "/weather",
       { q: `${cityName},${ufCode},${country}`, units: 'metric' },
       { ...HttpService.AuthHeader, ...HttpService.JsonHeader });
   }
 
   getWeatherIcon(iconId: string){
-    return `http://openweathermap.org/img/wn/${iconId}.png`;
+    return `http://openweathermap.org/img/wn/${iconId}@2x.png`;
   }
 
 }

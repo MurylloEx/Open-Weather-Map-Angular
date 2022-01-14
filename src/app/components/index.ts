@@ -5,5 +5,4 @@ export * from './owm-header/owm-header.component';
 export * from './owm-footer/owm-footer.component';
 export * from './owm-spacer/owm-spacer.component';
 export * from './owm-city-modal/owm-city-modal.component';
-export * from './owm-weather-row/owm-weather-row.component';
 export * from './owm-weather-item/owm-weather-item.component';

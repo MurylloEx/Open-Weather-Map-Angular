@@ -1,11 +1,54 @@
 <div class="owm-weather-item-container" *ngIf="owmWeather != null">
   <div class="owm-weather-item-header">
-    <p>{{owmWeather?.name ?? ''}}</p>
-    <div class="owm-weather-item-title">
-      
-    </div>
+    <img 
+      [src]="getIcon()" 
+      alt="Ícone" 
+      width="50" 
+      class="owm-weather-image" 
+    />
+    <p class="owm-weather-item-title">{{owmWeather?.name ?? ''}}</p>
   </div>
   <div class="owm-weather-item-body">
+
+    <div class="owm-weather-field">
+      <i class="owm-weather-icon pi pi-sun"></i>
+      <p class="owm-weather-field-text">Previsão: <b>{{getDescription()}}</b></p>
+    </div>
+
+    <div class="owm-weather-field">
+      <i class="owm-weather-icon pi pi-cloud"></i>
+      <p class="owm-weather-field-text">Vento: <b>{{getWindSpeed()}} m/s</b></p>
+    </div>
+
+    <div class="owm-weather-field">
+      <i class="owm-weather-icon pi pi-angle-double-right"></i>
+      <p class="owm-weather-field-text">Umidade: <b>{{getHumidity()}}%</b></p>
+    </div>
+
+    <div class="owm-weather-field">
+      <i class="owm-weather-icon pi pi-angle-double-right"></i>
+      <p class="owm-weather-field-text">Temp.: <b>{{getTemperature()}}°C</b></p>
+    </div>
+
+    <div class="owm-weather-field">
+      <i class="owm-weather-icon pi pi-angle-double-right"></i>
+      <p class="owm-weather-field-text">Temp. mínima: <b>{{getMinTemperature()}}°C</b></p>
+    </div>
+
+    <div class="owm-weather-field">
+      <i class="owm-weather-icon pi pi-angle-double-right"></i>
+      <p class="owm-weather-field-text">Temp. máxima: <b>{{getMaxTemperature()}}°C</b></p>
+    </div>
+
+    <div class="owm-weather-field">
+      <i class="owm-weather-icon pi pi-angle-double-right"></i>
+      <p class="owm-weather-field-text">Pressão atmosférica: <b>{{getPressure()}}</b></p>
+    </div>
+
+    <div class="owm-weather-field">
+      <i class="owm-weather-icon pi pi-cloud"></i>
+      <p class="owm-weather-field-text">Cobertura de nuvens: <b>{{getCloudsCoverage()}}%</b></p>
+    </div>
 
   </div>
 </div>

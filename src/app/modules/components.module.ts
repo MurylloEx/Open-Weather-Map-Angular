@@ -11,8 +11,7 @@ import {
   OwmHeaderComponent, 
   OwmPanelComponent, 
   OwmSpacerComponent,
-  OwmWeatherItemComponent,
-  OwmWeatherRowComponent
+  OwmWeatherItemComponent
 } from '../components';
 
 import { PrimeNgModule } from './prime-ng.module';
@@ -25,7 +24,6 @@ import { PrimeNgModule } from './prime-ng.module';
     OwmCardComponent,
     OwmSpacerComponent,
     OwmWeatherItemComponent,
-    OwmWeatherRowComponent,
     OwmCityModalComponent
   ],
   imports: [
@@ -46,7 +44,6 @@ import { PrimeNgModule } from './prime-ng.module';
     OwmCardComponent,
     OwmSpacerComponent,
     OwmWeatherItemComponent,
-    OwmWeatherRowComponent,
     OwmCityModalComponent
   ]
 })

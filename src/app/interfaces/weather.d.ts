@@ -58,7 +58,7 @@ export interface WeatherResponse {
   wind: Wind;
   clouds: Clouds;
   dt: number;
-  sys: {};
+  sys: Sys;
   timezone: number;
   id: number;
   name: string;
