@@ -13,6 +13,7 @@ export class OwmWeatherItemComponent implements OnInit {
 
   @Input() owmWeather: Optional<WeatherResponse> = null;
   @Output() owmClick: EventEmitter<any> = new EventEmitter<any>();
+  @Output() owmDelete: EventEmitter<any> = new EventEmitter<any>();
 
   constructor(private apiService: ApiService) { }
 
@@ -21,6 +22,10 @@ export class OwmWeatherItemComponent implements OnInit {
 
   onAddItem(){
     this.owmClick.emit();
+  }
+
+  onDeleteItem(){
+    this.owmDelete.emit(this.owmWeather);
   }
 
   getIcon(){

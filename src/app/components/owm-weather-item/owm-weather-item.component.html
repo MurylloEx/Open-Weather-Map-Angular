@@ -50,6 +50,18 @@
       <p class="owm-weather-field-text">Cobertura de nuvens: <b>{{getCloudsCoverage()}}%</b></p>
     </div>
 
+    <owm-spacer [owmSpace]="16"></owm-spacer>
+
+    <button 
+      pRipple 
+      pButton 
+      pTooltip="Excluir esta previsão do tempo" 
+      tooltipPosition="right" 
+      (click)="onDeleteItem()"
+      class="p-button-danger" 
+      icon="pi pi-trash">
+    </button>
+
   </div>
 </div>
 

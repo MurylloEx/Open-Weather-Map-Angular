@@ -25,9 +25,9 @@ export class PageHomeComponent implements OnInit {
       { name: 'Olinda', uf: 'PE' },
       { name: 'Alagoinhas', uf: 'PE' }
     ];
-    // Promise.all(cities.map(c => this.apiService.getCityWeather(c.name, c.uf))).then((values) => {
-    //   this.m_CityWeatherList = values;
-    // });
+    Promise.all(cities.map(c => this.apiService.getCityWeather(c.name, c.uf))).then((values) => {
+      this.m_CityWeatherList = values;
+    });
   }
 
   onCityNameFilter(event: any) {
@@ -51,6 +51,10 @@ export class PageHomeComponent implements OnInit {
         this.onCityWeatherModalClose(value);
       }
     });
+  }
+
+  doDeleteCityWeather(event: any){
+    this.m_CityWeatherList = this.m_CityWeatherList.filter(v => v.id != event.id);
   }
 
 }

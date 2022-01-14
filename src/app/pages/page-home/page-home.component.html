@@ -30,13 +30,21 @@
   
     <ng-template let-item pTemplate="listItem">
       <div class="p-3 col col-12 sm:col-12 md:col-6">
-        <owm-weather-item [owmWeather]="item" (owmClick)="doAddCityWeather()"></owm-weather-item>
+        <owm-weather-item 
+          [owmWeather]="item" 
+          (owmClick)="doAddCityWeather()" 
+          (owmDelete)="doDeleteCityWeather($event)">
+        </owm-weather-item>
       </div>
     </ng-template>
   
     <ng-template let-item pTemplate="gridItem">
       <div class="p-3 col col-12 sm:col-12 md:col-4 lg:col-3 xlg:col-2">
-        <owm-weather-item [owmWeather]="item" (owmClick)="doAddCityWeather()"></owm-weather-item>
+        <owm-weather-item 
+          [owmWeather]="item" 
+          (owmClick)="doAddCityWeather()" 
+          (owmDelete)="doDeleteCityWeather($event)">
+        </owm-weather-item>
       </div>
     </ng-template>
   
