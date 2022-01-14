@@ -7,7 +7,6 @@ import { PrimeNGConfig } from 'primeng/api';
   styleUrls: ['./owm-app.component.css']
 })
 export class OwmAppComponent {
-  title = 'Comeia Weather Panel';
 
   constructor(private primengConfig: PrimeNGConfig) {
     this.primengConfig.ripple = true;

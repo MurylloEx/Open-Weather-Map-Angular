@@ -18,7 +18,7 @@ export class ApiService {
   getCityWeather(cityName: string, ufCode: string, country: string = 'BR') {
     return this.http.get(
       this.getApiBase() + "/weather",
-      { q: `${cityName},${ufCode},${country}` },
+      { q: `${cityName},${ufCode},${country}`, units: 'metric' },
       { ...HttpService.AuthHeader, ...HttpService.JsonHeader });
   }
 

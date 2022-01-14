@@ -24,4 +24,8 @@ export class PageHomeComponent implements OnInit {
     return event?.target?.value ?? '';
   }
 
+  doGetCityWeatherList(){
+    return [...this.m_CityWeatherList, null];
+  }
+
 }

@@ -1,1 +1,15 @@
-<p>owm-weather-item works!</p>
+<div class="owm-weather-item-container" *ngIf="owmWeather != null">
+  <div class="owm-weather-item-header">
+    <p>{{owmWeather?.name ?? ''}}</p>
+    <div class="owm-weather-item-title">
+      
+    </div>
+  </div>
+  <div class="owm-weather-item-body">
+
+  </div>
+</div>
+
+<div pRipple class="owm-weather-item-add" *ngIf="owmWeather == null" (click)="onAddItem()">
+  <i class="pi pi-plus" style="font-size: 5rem;"></i>
+</div>

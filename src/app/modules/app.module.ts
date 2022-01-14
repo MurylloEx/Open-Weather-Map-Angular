@@ -8,7 +8,7 @@ import { ComponentsModule } from "./components.module";
 
 import { OwmAppComponent } from "../components";
 import { ApiAuthInterceptorService } from "../hooks";
-import { ApiService, HttpService } from "../services";
+import { ApiService, HttpService, ModalService } from "../services";
 
 @NgModule({
   declarations: [OwmAppComponent],
@@ -22,6 +22,7 @@ import { ApiService, HttpService } from "../services";
   providers: [
     HttpService,
     ApiService,
+    ModalService,
     ApiAuthInterceptorService
   ],
   bootstrap: [OwmAppComponent]

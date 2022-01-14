@@ -14,6 +14,8 @@ import {
   OwmWeatherRowComponent
 } from '../components';
 
+import { PrimeNgModule } from './prime-ng.module';
+
 @NgModule({
   declarations: [
     OwmHeaderComponent,
@@ -29,6 +31,7 @@ import {
     FormsModule,
     BrowserModule,
     BrowserAnimationsModule,
+    PrimeNgModule
   ],
   exports: [
     CommonModule,
