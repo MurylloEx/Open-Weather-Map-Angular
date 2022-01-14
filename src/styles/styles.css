@@ -1,5 +1,3 @@
-/*Something*/
-
 .owm-style-page-dock {
   min-height: calc(100vh - 150px);
   padding-bottom: 128px;
@@ -31,7 +29,6 @@
   from {
     background-position: 0px;
   }
-
   to {
     background-position: 5440px;
   }

@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { 
   OwmCardComponent, 
+  OwmCityModalComponent, 
   OwmFooterComponent, 
   OwmHeaderComponent, 
   OwmPanelComponent, 
@@ -24,7 +25,8 @@ import { PrimeNgModule } from './prime-ng.module';
     OwmCardComponent,
     OwmSpacerComponent,
     OwmWeatherItemComponent,
-    OwmWeatherRowComponent
+    OwmWeatherRowComponent,
+    OwmCityModalComponent
   ],
   imports: [
     CommonModule,
@@ -44,7 +46,8 @@ import { PrimeNgModule } from './prime-ng.module';
     OwmCardComponent,
     OwmSpacerComponent,
     OwmWeatherItemComponent,
-    OwmWeatherRowComponent
+    OwmWeatherRowComponent,
+    OwmCityModalComponent
   ]
 })
 export class ComponentsModule { }

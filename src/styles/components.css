@@ -1,1 +1,29 @@
-/*Something*/
+@media (max-width: 575px) {
+  .owm-component-dialog {
+    width: 85%;
+  }
+}
+
+@media (min-width: 576px) {
+  .owm-component-dialog {
+    width: 70%;
+  }
+}
+
+@media (min-width: 768px) {
+  .owm-component-dialog {
+    width: 45%;
+  }
+}
+
+@media (min-width: 992px) {
+  .owm-component-dialog {
+    width: 35%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .owm-component-dialog {
+    width: 33%;
+  }
+}

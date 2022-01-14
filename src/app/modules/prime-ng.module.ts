@@ -15,6 +15,9 @@ import { InputSwitchModule } from "primeng/inputswitch";
 import { ToggleButtonModule } from "primeng/togglebutton";
 import { OverlayPanelModule } from "primeng/overlaypanel";
 import { InputTextareaModule } from "primeng/inputtextarea";
+import { DynamicDialogModule } from "primeng/dynamicdialog";
+
+import { DialogService } from "primeng/dynamicdialog";
 
 @NgModule({
   imports: [
@@ -32,8 +35,10 @@ import { InputTextareaModule } from "primeng/inputtextarea";
     InputSwitchModule,
     OverlayPanelModule,
     ToggleButtonModule,
-    InputTextareaModule
+    InputTextareaModule,
+    DynamicDialogModule
   ],
+  providers: [DialogService],
   exports: [
     CardModule,
     ToastModule,
@@ -49,7 +54,8 @@ import { InputTextareaModule } from "primeng/inputtextarea";
     InputSwitchModule,
     OverlayPanelModule,
     ToggleButtonModule,
-    InputTextareaModule
+    InputTextareaModule,
+    DynamicDialogModule
   ]
 })
 export class PrimeNgModule { }
